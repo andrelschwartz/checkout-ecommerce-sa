@@ -12,7 +12,17 @@ function calcularSubtotal(itens) {
   // ===== SEÇÃO 2: CUPOM (estruturas condicionais) =====
   
   function aplicarCupom(subtotal, codigo) {
-    // TODO
+    let desconto = 0;
+  
+    if (codigo === "DESC10") {
+      desconto = subtotal * 0.10;
+    } else if (codigo === "DESC20" && subtotal >= 200) {
+      desconto = subtotal * 0.20;
+    } else if (codigo === "FRETEGRATIS") {
+      desconto = 15;
+    }
+  
+    return Math.max(0, subtotal - desconto);
   }
   
   

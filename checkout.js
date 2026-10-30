@@ -29,7 +29,9 @@ function calcularSubtotal(itens) {
   // ===== SEÇÃO 3: CHECKOUT (integração) =====
   
   function finalizarCompra(itens, codigoCupom) {
-    return { subtotal: 0, desconto: 0, total: 0 }; // TODO: integrar carrinho e cupom
+    const subtotal = calcularSubtotal(itens);
+    const valorFinal = aplicarCupom(subtotal, codigoCupom);
+    return { subtotal: subtotal, desconto: valorFinal - subtotal, total: valorFinal };
   }
   
   

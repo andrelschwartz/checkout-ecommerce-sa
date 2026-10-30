@@ -54,3 +54,5 @@ function calcularSubtotal(itens) {
     { nome: "Tênis", preco: 150, quantidade: 1 }
   ];
   console.log(finalizarCompra(itens, "DESC10"));
+
+  //MERGE REALIZADO PELO GIT MERGE
